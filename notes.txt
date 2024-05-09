@@ -1,0 +1,34 @@
+https://developer.android.com/studio/releases/platform-tools
+
+2. Extract the Platform Tools
+Once the download is complete, extract the zip file to a folder of your choice. A common choice is C:\platform-tools.
+3. Set Up System Path
+Right-click on the Start button and select System.
+Click on Advanced system settings and then on Environment Variables.
+Under System Variables, find and select the Path variable, then click on Edit.
+Click on New and add the path where you extracted the platform tools, e.g., C:\platform-tools.
+Click OK to close all dialog boxes.
+4. Verify Installation
+Open PowerShell by right-clicking the Start button and choosing Windows PowerShell.
+In the PowerShell window, type adb version to ensure ADB is correctly installed. This command should return the version of ADB installed.
+5. Connect ADB to BlueStacks
+To control BlueStacks via ADB:
+
+Open BlueStacks and go to Settings.
+Under the Preferences tab, enable Android Debugging.
+Find the IP address and port number that BlueStacks uses for ADB under ADB settings. Usually, it’s something like 127.0.0.1:5555.
+Go back to PowerShell and connect to BlueStacks by typing:
+arduino
+Copy code
+adb connect 127.0.0.1:5555
+Confirm that your device is connected by typing:
+Copy code
+adb devices
+This command should list the connected devices.
+6. Running Commands
+You can now run any ADB command to control BlueStacks. For example, to install an APK from your computer, you could use:
+
+css
+Copy code
+adb install path\to\your\apkfile.apk
+These steps will allow you to use ADB with PowerShell to control BlueStacks or any Android emulator. Make sure to run PowerShell as an administrator if you encounter any permission issues.
