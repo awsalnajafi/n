@@ -3,6 +3,17 @@ https://developer.android.com/studio/releases/platform-tools
 adb -s 127.0.0.1:6555 shell uiautomator dump /sdcard/window_dump.xml && adb -s 127.0.0.1:6555 pull /sdcard/window_dump.xml ./window_dump.xml
 
 
+
+Based on the updated XML snippet you've provided for the "Reservation" button, the bounds are now "[719,2598][1020,2896]". These bounds will be used to calculate the new center coordinates for the button, and I will update the script accordingly.
+
+Calculating the Center of the "Reservation" Button
+To find the center where the click should occur:
+
+X-coordinate: (719 + 1020) / 2 = 869.5 ≈ 870
+Y-coordinate: (2598 + 2896) / 2 = 2747
+
+
+
 adb install release.RE-aligned-debugSigned.apk
 
 mitmproxy -p 8083 -s /Users/aws/PycharmProjects/recaptcha/main.py 
