@@ -1,5 +1,7 @@
 https://developer.android.com/studio/releases/platform-tools
 
+adb install release.RE-aligned-debugSigned.apk
+
 mitmproxy -p 8083 -s /Users/aws/PycharmProjects/recaptcha/main.py 
 
 2. Extract the Platform Tools
