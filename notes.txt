@@ -1,5 +1,8 @@
 https://developer.android.com/studio/releases/platform-tools
 
+adb -s 127.0.0.1:6555 shell uiautomator dump /sdcard/window_dump.xml && adb -s 127.0.0.1:6555 pull /sdcard/window_dump.xml ./window_dump.xml
+
+
 adb install release.RE-aligned-debugSigned.apk
 
 mitmproxy -p 8083 -s /Users/aws/PycharmProjects/recaptcha/main.py 
