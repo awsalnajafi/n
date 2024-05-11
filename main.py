@@ -41,6 +41,7 @@ def response(flow: http.HTTPFlow):
         data['result']['toWorkHour'] = "24:00:00"
         data['result']['fromServiceWorkHour'] = "00:00:00"
         data['result']['toServiceWorkHour'] = "24:00:00"
+        data['result']['bookingNumberLimit'] = 50
 
         # Update the response with the modified data
         flow.response.text = json.dumps(data)
